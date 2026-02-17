@@ -39,7 +39,7 @@ spreadCopy[spreadCopy.length - 1] = 50;
 console.log("originalScores after spread copy change:", originalScores);
 console.log("spreadCopy:", spreadCopy);
 
-*/
+
  //q4 
  
  let studentNames = ["Alice", "Bob", "Charlie", "Alice", "David"];
@@ -49,6 +49,15 @@ console.log('index of the last occorrence of alice',studentNames.lastIndexOf('Al
 
 console.log ('Includes Charlie:' ,studentNames.includes('Charlie')    );
 
-console.log('Includes Eve:', studentNames.includes('Eve')     );
-
+console.log('Includes Eve:', studentNames.includes('Eve')     );   
+*/
 //q5 
+let products = [{id: 1, name: "Laptop", price: 1200}, {id: 2, name: "Mouse", price: 25}, {id: 3, name: "Keyboard", price: 75}];
+
+let productId2 = products.find(product => product.id === 2);
+console.log("Product with id 2:", productId2);
+
+let productprice = products.findIndex(product => product.price >1000);
+console.log("Product with price > 100 :", productprice);
+
+// 6 
