@@ -1,4 +1,6 @@
-//q1
+
+/* 
+git//q1
 
   let productCategorie= [ "Books", "Eletronics", "Pen", "Paper","Fruits"];
   //a
@@ -37,6 +39,16 @@ spreadCopy[spreadCopy.length - 1] = 50;
 console.log("originalScores after spread copy change:", originalScores);
 console.log("spreadCopy:", spreadCopy);
 
-
+*/
  //q4 
  
+ let studentNames = ["Alice", "Bob", "Charlie", "Alice", "David"];
+  console.log('index of the first occurrence of alice', studentNames.indexOf('Alice')    );
+
+console.log('index of the last occorrence of alice',studentNames.lastIndexOf('Alice')        );
+
+console.log ('Includes Charlie:' ,studentNames.includes('Charlie')    );
+
+console.log('Includes Eve:', studentNames.includes('Eve')     );
+
+//q5 
