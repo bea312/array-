@@ -50,7 +50,7 @@ console.log('index of the last occorrence of alice',studentNames.lastIndexOf('Al
 console.log ('Includes Charlie:' ,studentNames.includes('Charlie')    );
 
 console.log('Includes Eve:', studentNames.includes('Eve')     );   
-*/
+
 //q5 
 let products = [{id: 1, name: "Laptop", price: 1200}, {id: 2, name: "Mouse", price: 25}, {id: 3, name: "Keyboard", price: 75}];
 
@@ -59,5 +59,21 @@ console.log("Product with id 2:", productId2);
 
 let productprice = products.findIndex(product => product.price >1000);
 console.log("Product with price > 100 :", productprice);
+*/
+//6 
 
-// 6 
+let userAges = [18, 24, 33, 16, 40];
+ let hasUnder18 = userAges.some(age =>age < 18);
+console.log("At least one user under 18:", hasUnder18);
+
+let allAdults = userAges.every(age => age >= 18);
+console.log("All users are 18 or older:", allAdults);
+
+
+let hasMultipleOf5 = userAges.some(age => age % 5 === 0);
+console.log("Any age is a multiple of 5:", hasMultipleOf5);
+
+// q7
+
+
+
