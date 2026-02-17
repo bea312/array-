@@ -25,3 +25,18 @@ inventory.shift();
 inventory.splice(1,1,25,35);
 console.log(inventory );   
 
+// q3
+
+let originalScores = [90, 85, 78];
+ let referenceCopy = originalScores;
+ referenceCopy[0]=100;
+ console.log('original:', originalScores);
+ console.log('reference:', referenceCopy);
+ let spreadCopy =[...originalScores];
+spreadCopy[spreadCopy.length - 1] = 50;
+console.log("originalScores after spread copy change:", originalScores);
+console.log("spreadCopy:", spreadCopy);
+
+
+ //q4 
+ 
