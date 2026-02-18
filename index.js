@@ -102,6 +102,19 @@ console.log("Joined sentence:", sentence);
 let middleThree = sentenceParts.slice(1, 4);
 console.log("Middle three elements:", middleThree);
 
+//  q9
+let nestedList = [1, [2, 3], [4, [5, 6]], 7];
+
+
+let flatOnce = nestedList.flat();
+console.log("Flattened once:", flatOnce);
+
+
+let fullyFlat = nestedList.flat(Infinity);
+console.log("Completely flattened:", fullyFlat);
+
+// q10
+
 
 
 
