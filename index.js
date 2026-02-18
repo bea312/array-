@@ -59,7 +59,7 @@ console.log("Product with id 2:", productId2);
 
 let productprice = products.findIndex(product => product.price >1000);
 console.log("Product with price > 100 :", productprice);
-*/
+
 //6 
 
 let userAges = [18, 24, 33, 16, 40];
@@ -72,8 +72,26 @@ console.log("All users are 18 or older:", allAdults);
 
 let hasMultipleOf5 = userAges.some(age => age % 5 === 0);
 console.log("Any age is a multiple of 5:", hasMultipleOf5);
-
+*/
 // q7
+
+
+let dataPoints = [42, 10, 500, 2, 77];
+
+
+let ascending = [...dataPoints].sort((a, b) => a - b);
+console.log("Ascending order:", ascending);
+
+let descending = [...dataPoints].sort((a,b)=>b-a );
+console.log('descending order :', descending);
+
+let reversed = [...dataPoints].reverse();
+console.log("Reversed original order:", reversed);
+
+//q8
+
+
+
 
 
 
