@@ -140,7 +140,7 @@ console.log("Average score:", average);
 
 let belowAverageScores = testScores.filter(score => score < average);
 console.log("Below average scores:", belowAverageScores);
-*/
+
 
 //q12 
 
@@ -188,6 +188,37 @@ let sortByAgeThenName = [...users].sort((a, b) => {
 console.log("Sorted by age then name:", sortByAgeThenName);
 
 // q14
+
+
+
+let userNames = users.map(user => user.name);
+console.log("User names:", userNames);
+
+
+let usersOlderThan28 = users.filter(user => user.age > 28);
+console.log("Users older than 28:", usersOlderThan28);
+
+*/
+//Section F: Multi-Dimensional Arrays 
+
+// q15
+// Create a 3x3 matrix initialized with zeros
+let gameBoard = [
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0]
+];
+
+
+gameBoard[1][1] = 1;
+
+
+console.log("Top-right corner value:", gameBoard[0][2]);
+
+console.log("Game board:", gameBoard);
+
+
+//q16 
 
 
 
