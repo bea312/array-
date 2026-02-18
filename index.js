@@ -72,7 +72,7 @@ console.log("All users are 18 or older:", allAdults);
 
 let hasMultipleOf5 = userAges.some(age => age % 5 === 0);
 console.log("Any age is a multiple of 5:", hasMultipleOf5);
-*/
+
 // q7
 
 
@@ -87,8 +87,20 @@ console.log('descending order :', descending);
 
 let reversed = [...dataPoints].reverse();
 console.log("Reversed original order:", reversed);
+*/
 
 //q8
+ let arr1 = ["A", "B"]; arr2 = ["C", "D"];
+ let sentenceParts = ["Hello", "world", "this", "is", "great"];
+
+ let combinedArray = arr1.concat(arr2);
+console.log("Combined array:", combinedArray);
+
+let sentence = sentenceParts.join(" ");
+console.log("Joined sentence:", sentence);
+
+let middleThree = sentenceParts.slice(1, 4);
+console.log("Middle three elements:", middleThree);
 
 
 
