@@ -113,7 +113,36 @@ console.log("Flattened once:", flatOnce);
 let fullyFlat = nestedList.flat(Infinity);
 console.log("Completely flattened:", fullyFlat);
 
-// q10
+// q10 
+
+let pricesUSD = [10.50, 20.00, 5.25];
+const exchangeRate = 1.3;
+
+
+let pricesLocal = pricesUSD.map(price => price * exchangeRate);
+console.log("Prices in local currency:", pricesLocal);
+
+let priceStrings = pricesUSD.map(price => `Item price: $${price.toFixed(2)}`);
+console.log("Formatted price strings:", priceStrings);
+
+//Q11
+let testScores = [45, 78, 92, 30, 65, 88];
+
+
+let passingScores = testScores.filter(score => score >= 70);
+console.log("Passing scores:", passingScores);
+
+
+let total = testScores.reduce((sum, score) => sum + score, 0);
+let average = total / testScores.length;
+console.log("Average score:", average);
+
+
+let belowAverageScores = testScores.filter(score => score < average);
+console.log("Below average scores:", belowAverageScores);
+
+
+//q12 
 
 
 
