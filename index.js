@@ -198,7 +198,7 @@ console.log("User names:", userNames);
 let usersOlderThan28 = users.filter(user => user.age > 28);
 console.log("Users older than 28:", usersOlderThan28);
 
-*/
+
 //Section F: Multi-Dimensional Arrays 
 
 // q15
@@ -217,8 +217,34 @@ console.log("Top-right corner value:", gameBoard[0][2]);
 
 console.log("Game board:", gameBoard);
 
-
+*/
 //q16 
+
+
+let gameBoard = [
+  [0, 0, 0],
+  [0, 1, 0],
+  [0, 0, 0]
+];
+
+let sum = 0;
+
+
+for (let row = 0; row < gameBoard.length; row++) {
+  for (let col = 0; col < gameBoard[row].length; col++) {
+    console.log(`Value at [${row}][${col}]:`, gameBoard[row][col]);
+    sum += gameBoard[row][col];
+  }
+}
+
+
+console.log("Sum of all elements:", sum);
+
+
+//Section G: Mini Projects
+ // project 1
+ 
+
 
 
 
