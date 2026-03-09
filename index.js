@@ -1,13 +1,13 @@
 
-/* 
-git//q1
+
+//q1
 
   let productCategorie= [ "Books", "Eletronics", "Pen", "Paper","Fruits"];
   //a
 console.log("firstname",productCategorie[0]);
 
 // print last name using .length
-console.log('lastname:', productCategorie [productCategorie.length-1]   );
+console.log('lastname:', productCategorie [productCategorie.length-1]  );
 
 console.log('totalnumber:',productCategorie.length);
 
@@ -217,7 +217,7 @@ console.log("Top-right corner value:", gameBoard[0][2]);
 
 console.log("Game board:", gameBoard);
 
-*/
+
 //q16 
 
 
@@ -244,9 +244,192 @@ console.log("Sum of all elements:", sum);
 //Section G: Mini Projects
  // project 1
  
+let students = [
+  { name: "A", score: 85 },
+  { name: "B", score: 45 },
+  { name: "C", score: 92 },
+  { name: "D", score: 68 }
+];
+
+
+let passedStudents = students.filter(student => student.score >= 70);
+console.log("Passed students:", passedStudents);
+
+
+let totalScore = students.reduce((sum, student) => sum + student.score, 0);
+let averageScore = totalScore / students.length;
+console.log("Average score:", averageScore);
+
+
+let topScorer = students.reduce((top, student) => {
+  return student.score > top.score ? student : top;
+});
+console.log("Top scorer:", topScorer);
+
+// project 2
+//a
+
+let cart = [
+  { id: 1, name: "Shirt", price: 20, quantity: 2 },
+  { id: 2, name: "Pants", price: 50, quantity: 1 }
+];
+
+
+// b
+let totalCost = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+console.log("Total cost:", totalCost);
+
+
+// c
+
+cart = cart.map(item => {
+  if (item.id === 1) {
+    return { ...item, quantity: 3 };
+  }
+  return item;
+});
+
+console.log("Cart after quantity update:", cart);
 
 
 
+cart = cart.filter(item => item.id !== 2);
+
+console.log("Cart after removing item:", cart);
+
+
+
+// Section H: Advanced Challenges
+
+// challenge 1
+
+
+let data = [1, 5, 2, 8, 5, 1, 9, 2];
+
+let uniqueData = data.filter((value, index) => data.indexOf(value) === index);
+
+console.log("Unique data:", uniqueData);
+
+
+
+// challenge 2
+
+
+function myReduce(array, callback, initialValue) {
+  let accumulator = initialValue;
+
+  for (let i = 0; i < array.length; i++) {
+    accumulator = callback(accumulator, array[i]);
+  }
+
+  return accumulator;
+}
+
+let numbers = [1, 2, 3, 4];
+
+let sum = myReduce(numbers, (acc, num) => acc + num, 0);
+
+console.log("Sum using myReduce:", sum);
+
+
+
+// challenge 3
+
+
+let company = [
+  { name: "A", details: { city: "NY" } }
+];
+
+// a
+let spreadCopy = [...company];
+
+spreadCopy[0].details.city = "London";
+
+console.log("Original company:", company);
+console.log("Spread copy:", spreadCopy);
+
+
+
+
+// b
+
+let deepCopy = JSON.parse(JSON.stringify(company));
+
+deepCopy[0].details.city = "Paris";
+
+console.log("Original company after deep copy:", company);
+console.log("Deep copy:", deepCopy);
+
+
+
+// Final Challenge
+
+
+// a
+let board = [
+  ["", "", ""],
+  ["", "", ""],
+  ["", "", ""]
+];
+
+
+// b
+board[0][0] = "X";
+board[1][1] = "O";
+
+console.log("Board:", board);
+
+
+// c
+function checkWin(board, playerSymbol) {
+
+  
+  for (let i = 0; i < 3; i++) {
+    if (
+      board[i][0] === playerSymbol &&
+      board[i][1] === playerSymbol &&
+      board[i][2] === playerSymbol
+    ) {
+      return true;
+    }
+  }
+
+  
+  for (let i = 0; i < 3; i++) {
+    if (
+      board[0][i] === playerSymbol &&
+      board[1][i] === playerSymbol &&
+      board[2][i] === playerSymbol
+    ) {
+      return true;
+    }
+  }
+
+  
+  if (
+    board[0][0] === playerSymbol &&
+    board[1][1] === playerSymbol &&
+    board[2][2] === playerSymbol
+  ) {
+    return true;
+  }
+
+  if (
+    board[0][2] === playerSymbol &&
+    board[1][1] === playerSymbol &&
+    board[2][0] === playerSymbol
+  ) {
+    return true;
+  }
+
+  return false;
+}
+
+
+
+console.log("X wins:", checkWin(board, "X"));
+console.log("O wins:", checkWin(board, "O"));
 
 
 
